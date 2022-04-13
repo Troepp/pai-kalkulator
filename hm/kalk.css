@@ -1,0 +1,69 @@
+body{
+    background-image: url(or.png);
+    animation: animate-background linear 175s infinite;
+}
+@keyframes animate-background {
+	from { background-position: 3000px 0px; } 
+	to { background-position: 0px 0px; }
+}
+table{
+    margin: auto;
+}
+#wysw {
+  width: 265px;
+  max-width: 270px;
+  font-size: 26px;
+  text-align: right;
+  background: #333;
+  color: #666;
+  float: left;
+  border-radius: 5%;
+}
+#tempe{
+  width: 83px;
+  text-align: center;
+  margin: auto;
+}
+#wag{
+  width: 83px;
+  text-align: center;
+  margin: auto;
+}
+#wysw:hover{
+  color: dimgrey;
+  box-shadow: 0 0 0px dimgrey;
+  text-shadow: 0 0 0px dimgrey;
+}
+input {
+    position: relative; 
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 63px;
+  background: #333;
+  border-radius: 50%;
+  font-size: 25px;
+  color: #666;
+  transition: .5s;
+  }
+  input:hover {
+    color: #db0948;
+    box-shadow: 0 0 7px #db0948;
+    text-shadow: 0 0 7px #db0948;
+  }
+  input::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #1064ff;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+  }
+  
+  

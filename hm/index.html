@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" type="text/css" href="kalk.css">
+    <script>
+    </script>
+</head>
+<body>
+    <form name="kalk">
+        <table>
+            <tr>
+                <td colspan="4">
+                    <input type="text" name="wysw" id="wysw" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="button" name="jeden" value="1" onclick="kalk.wysw.value += '1'"></td>
+                <td><input type="button" name="dwa" value="2" onclick="kalk.wysw.value += '2'"></td>
+                <td><input type="button" name="trzy" value="3" onclick="kalk.wysw.value += '3'"></td>
+                <td><input type="button" class="operator" name="plus" value="+" onclick="kalk.wysw.value += '+'"></td>               
+            </tr>
+            <tr>
+                <td><input type="button" name="cztery" value="4" onclick="kalk.wysw.value += '4'"></td>
+                <td><input type="button" name="piec" value="5" onclick="kalk.wysw.value += '5'"></td>
+                <td><input type="button" name="szesc" value="6" onclick="kalk.wysw.value += '6'"></td>
+                <td><input type="button" class="operator" name="minus" value="-" onclick="kalk.wysw.value += '-'"></td>
+             </tr>
+             <tr>
+                <td><input type="button" name="siedem" value="7" onclick="kalk.wysw.value += '7'"></td>
+                <td><input type="button" name="osiem" value="8" onclick="kalk.wysw.value += '8'"></td>
+                <td><input type="button" name="dziewiec" value="9" onclick="kalk.wysw.value += '9'"></td>
+                <td><input type="button" class="operator" name="mnoz" value="X" onclick="kalk.wysw.value += '*'"></td>
+             </tr>
+             <tr>
+                <td><input type="button" id="czysc" name="czysc" value="C" onclick="kalk.wysw.value = ''"></td>
+                <td><input type="button" name="zero" value="0" onclick="kalk.wysw.value += '0'"></td>
+                <td><input type="button" name="wynik" value="=" onclick="kalk.wysw.value = eval(kalk.wysw.value)"></td>
+                <td><input type="button" class="operator" name="dziel" value="/" onclick="kalk.wysw.value += '/'"></td>
+             </tr>
+             
+        </table>
+        <table class="temp">
+        <tr>
+            <td><input type="button" id="tempe" name="tempe" value="°C>°F" onclick="kalk.wysw.value += '*9/5+32'"</td>
+            <td><input type="button" id="tempe" name="tempe" value="°C>°K"  onclick="kalk.wysw.value += '+273.15'"</td>
+            <td><input type="button" id="tempe" name="tempe" value="°K>°F"  onclick="kalk.wysw.value += '*9/5-459.67'"</td>
+        </tr>
+        <table class="waga">
+            <tr>
+                <td><input type="button" id="wag" name="wag" value="g>kg" onclick="kalk.wysw.value += '/1000'"</td>
+                <td><input type="button" id="wag" name="wag" value="kg>t"  onclick="kalk.wysw.value += '/1000'"</td>
+                <td><input type="button" id="wag" name="wag" value="mg>g"  onclick="kalk.wysw.value += '/1000'"</td>
+            </tr>
+    </table>
+    </form>
+</body>
+</html>
