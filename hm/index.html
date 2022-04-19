@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator</title>
     <link rel="stylesheet" type="text/css" href="kalk.css">
-    <script>
-    </script>
+    <script src="skr.js"></script>
 </head>
 <body>
     <form name="kalk">
@@ -21,25 +20,25 @@
                 <td><input type="button" name="jeden" value="1" onclick="kalk.wysw.value += '1'"></td>
                 <td><input type="button" name="dwa" value="2" onclick="kalk.wysw.value += '2'"></td>
                 <td><input type="button" name="trzy" value="3" onclick="kalk.wysw.value += '3'"></td>
-                <td><input type="button" class="operator" name="plus" value="+" onclick="kalk.wysw.value += '+'"></td>               
+                <td><input type="button" class="operator" name="plus" value="+" onclick="dod()"></td>               
             </tr>
             <tr>
                 <td><input type="button" name="cztery" value="4" onclick="kalk.wysw.value += '4'"></td>
                 <td><input type="button" name="piec" value="5" onclick="kalk.wysw.value += '5'"></td>
                 <td><input type="button" name="szesc" value="6" onclick="kalk.wysw.value += '6'"></td>
-                <td><input type="button" class="operator" name="minus" value="-" onclick="kalk.wysw.value += '-'"></td>
+                <td><input type="button" class="operator" name="minus" value="-" onclick="ode()"></td>
              </tr>
              <tr>
                 <td><input type="button" name="siedem" value="7" onclick="kalk.wysw.value += '7'"></td>
                 <td><input type="button" name="osiem" value="8" onclick="kalk.wysw.value += '8'"></td>
                 <td><input type="button" name="dziewiec" value="9" onclick="kalk.wysw.value += '9'"></td>
-                <td><input type="button" class="operator" name="mnoz" value="X" onclick="kalk.wysw.value += '*'"></td>
+                <td><input type="button" class="operator" name="mnoz" value="X" onclick="mnoze()"></td>
              </tr>
              <tr>
                 <td><input type="button" id="czysc" name="czysc" value="C" onclick="kalk.wysw.value = ''"></td>
                 <td><input type="button" name="zero" value="0" onclick="kalk.wysw.value += '0'"></td>
                 <td><input type="button" name="wynik" value="=" onclick="kalk.wysw.value = eval(kalk.wysw.value)"></td>
-                <td><input type="button" class="operator" name="dziel" value="/" onclick="kalk.wysw.value += '/'"></td>
+                <td><input type="button" class="operator" name="dziel" value="/" onclick="dziel()"></td>
              </tr>
              
         </table>
@@ -55,6 +54,11 @@
                 <td><input type="button" id="wag" name="wag" value="kg>t"  onclick="kalk.wysw.value += '/1000'"</td>
                 <td><input type="button" id="wag" name="wag" value="mg>g"  onclick="kalk.wysw.value += '/1000'"</td>
             </tr>
+            <table class="cosinusy">
+                <tr>
+                    <td><input type="button" id="cos" name="cos" value="sin" onclick="sin()"</td>
+                    <td><input type="button" id="cos" name="cos" value="cos"  onclick="kalk.wysw.value += '/1000'"</td>
+                </tr>
     </table>
     </form>
 </body>

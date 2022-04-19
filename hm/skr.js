@@ -12,3 +12,6 @@ function dziel(){
     document.getElementById("wysw").value += '/';
     
 }
+function sin(){
+    document.getElementById("wysw").value += sin(document.getElementById("wysw").value);
+}
